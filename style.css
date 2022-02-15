@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right, hsla(145, 100%, 64%, 0.36), hsla(69, 100%, 66%, 0.76));
+    height: 100vh;
+
+}
+
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgb(8, 8, 59);
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+.accordion {
+    margin-top: 8px;
+}
+
+.accordion-heading {
+    background-color: rgb(0, 255, 98);
+    color: rgb(15, 15, 48);
+    padding: 15px 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.accordion-heading.active .icon {
+    transform: rotateZ(180deg);
+}
+
+.accordion-details {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.accordion-heading.active + .accordion-details {
+    height: auto;
+}
